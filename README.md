@@ -16,4 +16,4 @@ If we POST to http://127.0.0.1:8000/testapp/x/users we get the following behavio
   * PKey exists in DB: Partial update, only updating the `methods` field and altering the value saved to DB by the `validate_methods` field.
   * PKey doesn't exist: Normal validation error for the field `direct`  
   
-Normal list and detail views work, PATCH/PUT still functional.
+Note: actually PUT/PATCH to `/users/[subscriber_key]` don't work since subscriber_key is a required field and must be in the data. Most likely not too difficult to fix but I'm done.
